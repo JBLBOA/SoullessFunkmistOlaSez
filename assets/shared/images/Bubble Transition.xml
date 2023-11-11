@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Bubble Transition.png">
+	<!-- Created with Adobe Animate version 20.5.1.31044 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Bubbles0000" x="2" y="2" width="320" height="240"/>
+	<SubTexture name="Bubbles0001" x="324" y="2" width="320" height="240"/>
+	<SubTexture name="Bubbles0002" x="646" y="2" width="320" height="240"/>
+	<SubTexture name="Bubbles0003" x="968" y="2" width="320" height="240"/>
+	<SubTexture name="Bubbles0004" x="1290" y="2" width="320" height="240"/>
+	<SubTexture name="Bubbles0005" x="1612" y="2" width="320" height="240"/>
+	<SubTexture name="Bubbles0006" x="2" y="244" width="320" height="240"/>
+	<SubTexture name="Bubbles0007" x="324" y="244" width="320" height="240"/>
+	<SubTexture name="Bubbles0008" x="646" y="244" width="320" height="240"/>
+	<SubTexture name="Bubbles0009" x="968" y="244" width="320" height="240"/>
+	<SubTexture name="Bubbles0010" x="1290" y="244" width="320" height="240"/>
+	<SubTexture name="Bubbles0011" x="1612" y="244" width="320" height="240"/>
+	<SubTexture name="Bubbles0012" x="2" y="486" width="320" height="240"/>
+	<SubTexture name="Bubbles0013" x="324" y="486" width="320" height="240"/>
+	<SubTexture name="Bubbles0014" x="646" y="486" width="320" height="240"/>
+	<SubTexture name="Bubbles0015" x="968" y="486" width="320" height="240"/>
+	<SubTexture name="Bubbles0016" x="1290" y="486" width="320" height="240"/>
+	<SubTexture name="Bubbles0017" x="1612" y="486" width="320" height="240"/>
+	<SubTexture name="Bubbles0018" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0019" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0020" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0021" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0022" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0023" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0024" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0025" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0026" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0027" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0028" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0029" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0030" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0031" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0032" x="324" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0033" x="646" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0034" x="968" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0035" x="1290" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0036" x="1612" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0037" x="2" y="970" width="320" height="240"/>
+	<SubTexture name="Bubbles0038" x="324" y="970" width="320" height="240"/>
+	<SubTexture name="Bubbles0039" x="646" y="970" width="320" height="240"/>
+	<SubTexture name="Bubbles0040" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0041" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0042" x="2" y="728" width="320" height="240"/>
+	<SubTexture name="Bubbles0043" x="2" y="728" width="320" height="240"/>
+</TextureAtlas>

@@ -1,0 +1,32 @@
+{
+	"storyName": "squidward's bad day",
+	"difficulties": "hard",
+	"hideFreeplay": false,
+	"weekBackground": "redmist",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"my mind",
+			"squidward",
+			[
+				66,
+				253,
+				253
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Custom Week"
+}

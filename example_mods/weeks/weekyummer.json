@@ -1,0 +1,41 @@
+{
+	"storyName": "the yummer",
+	"difficulties": "hard",
+	"hideFreeplay": false,
+	"weekBackground": "yummer",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"mystery",
+			"yummer",
+			[
+				195,
+				153,
+				93
+			]
+		],
+		[
+			"deadlock",
+			"yummer",
+			[
+				195,
+				93,
+				53
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Custom Week",
+	"hiddenUntilUnlocked": false
+}

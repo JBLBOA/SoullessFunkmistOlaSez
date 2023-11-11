@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				105,
+				19
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Yummer_idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				139,
+				13
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Yummer_down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				90,
+				36
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Yummer_Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				71,
+				39
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Yummer_Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				74,
+				33
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Yummer_Left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/yumer",
+	"position": [
+		50,
+		30
+	],
+	"healthicon": "yummer",
+	"flip_x": false,
+	"healthbar_colors": [
+		183,
+		156,
+		113
+	],
+	"camera_position": [
+		-300,
+		60
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

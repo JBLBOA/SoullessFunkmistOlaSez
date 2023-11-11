@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="TacosDeCaca.png"><SubTexture name="TacosDeCaca idle0000" x="0" y="75" width="219" height="70" frameX="-50" frameY="-67" frameWidth="661" frameHeight="187" />
+<SubTexture name="TacosDeCaca idle0001" x="0" y="75" width="219" height="70" frameX="-50" frameY="-67" frameWidth="661" frameHeight="187" />
+<SubTexture name="TacosDeCaca idle0002" x="0" y="0" width="352" height="75" frameX="-50" frameY="-62" frameWidth="661" frameHeight="187" />
+<SubTexture name="TacosDeCaca idle0003" x="352" y="0" width="567" height="75" frameX="-50" frameY="-62" frameWidth="661" frameHeight="187" />
+<SubTexture name="TacosDeCaca idle0004" x="352" y="0" width="567" height="75" frameX="-50" frameY="-62" frameWidth="661" frameHeight="187" />
+<SubTexture name="TacosDeCaca idle0005" x="352" y="0" width="567" height="75" frameX="-50" frameY="-62" frameWidth="661" frameHeight="187" />
+<SubTexture name="TacosDeCaca idle0006" x="352" y="0" width="567" height="75" frameX="-50" frameY="-62" frameWidth="661" frameHeight="187" />
+</TextureAtlas>

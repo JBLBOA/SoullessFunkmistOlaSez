@@ -1,0 +1,40 @@
+function onCreatePost()
+	makeLuaSprite("overlay", "overlays/squid", -150, -10)
+	setObjectCamera("overlay", "hud")
+	setProperty("overlay.alpha", 1.0)
+	scaleObject("overlay", 1.5, 1.3)
+	updateHitbox("overlay")
+  
+        makeLuaSprite("color", "overlays/color", -150, -10)
+	setObjectCamera("color", "hud")
+	setProperty("color.alpha", 0.8)
+	scaleObject("color", 1.5, 1.3)
+        setBlendMode("color", "subtract")
+	updateHitbox("color")
+
+        makeLuaSprite("nick", "overlays/nick", 820, 490)
+	setObjectCamera("nick", "hud")
+	scaleObject("nick", 0.3, 0.3)
+	updateHitbox("nick")
+
+        makeAnimatedLuaSprite("static","overlays/static", -150, -10)
+        addAnimationByPrefix("static","static idle","static idle",25,true)
+        objectPlayAnimation("static","static idle",true)
+        setObjectCamera("static", "hud")
+        scaleObject("static", 1.7, 1.7)
+        updateHitbox("static")
+
+        makeAnimatedLuaSprite("vhs","overlays/Effects", 0, 0)
+        addAnimationByPrefix("vhs","idle","idle",25,true)
+        objectPlayAnimation("vhs","idle",true)
+        setObjectCamera("vhs", "hud")
+        scaleObject("vhs", 2.2, 2.2)
+        updateHitbox("vhs")
+
+
+	addLuaSprite("overlay", true)
+        addLuaSprite("color", true)
+        addLuaSprite("nick", true)
+        addLuaSprite("static", true)
+        addLuaSprite("vhs", true)
+end

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				810,
+				99
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "tacos idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				811,
+				100
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "tacos left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				811,
+				100
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "tacos down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				810,
+				100
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "tacos up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				810,
+				100
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "tacos right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/tacos",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "icon-tacos",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		161,
+		161
+	],
+	"camera_position": [
+		-930,
+		30
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

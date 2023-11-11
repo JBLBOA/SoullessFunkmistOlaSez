@@ -1,0 +1,41 @@
+{
+	"songs": [
+		[
+			"dejection",
+			"squidward",
+			[
+				80,
+				80,
+				80
+			]
+		],
+		[
+			"funhouse",
+			"squidward",
+			[
+				46,
+				60,
+				0
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"difficulties": "hard",
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"storyName": "covers",
+	"weekName": "red mist covers",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": true,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}
