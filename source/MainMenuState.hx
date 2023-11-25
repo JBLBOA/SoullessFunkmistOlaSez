@@ -20,8 +20,17 @@ import lime.app.Application;
 import Achievements;
 import editors.MasterEditorMenu;
 import flixel.input.keyboard.FlxKey;
-import flixel.addons.display.FlxRuntimeShader;
 import flixel.util.FlxColor;
+
+#if !flash 
+import flixel.addons.display.FlxRuntimeShader;
+import openfl.filters.ShaderFilter;
+#end
+
+#if sys
+import sys.FileSystem;
+import sys.io.File;
+#end
 
 using StringTools;
 
@@ -33,6 +42,7 @@ class MainMenuState extends MusicBeatState
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
+	public var runtimeShaders:Map<String, Array<String>> = new Map<String, Array<String>>();
 	
 	var optionShit:Array<String> = [
 		'story_mode',
@@ -45,6 +55,15 @@ class MainMenuState extends MusicBeatState
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
+
+	var episodes:FlxSprite;
+	var episodes1:FlxSprite;
+
+	var extras:FlxSprite;
+	var extras2:FlxSprite;
+
+	var configuracion:FlxSprite;
+	var creditos:FlxSprite;
 
 	override function create()
 	{
@@ -73,13 +92,68 @@ class MainMenuState extends MusicBeatState
 		persistentUpdate = persistentDraw = true;
 
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
-		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('menuBG'));
-		bg.scrollFactor.set(0, yScroll);
-		bg.setGraphicSize(Std.int(bg.width * 1.175));
+		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('mainmenu/nuevomenu/menu'));
+		bg.scrollFactor.set(0, 0);
 		bg.updateHitbox();
 		bg.screenCenter();
+		bg.scale.x = 0.5;
+		bg.scale.y = 0.51;
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
+
+		episodes = new FlxSprite(-80).loadGraphic(Paths.image('mainmenu/nuevomenu/episodes'));
+		episodes.scrollFactor.set(0, 0);
+		episodes.updateHitbox();
+		episodes.screenCenter();
+		episodes.scale.x = 0.5;
+		episodes.scale.y = 0.51;
+		episodes.antialiasing = ClientPrefs.globalAntialiasing;
+		add(episodes);
+
+		episodes1 = new FlxSprite(-80).loadGraphic(Paths.image('mainmenu/nuevomenu/episodes1'));
+		episodes1.scrollFactor.set(0, 0);
+		episodes1.updateHitbox();
+		episodes1.screenCenter();
+		episodes1.scale.x = 0.5;
+		episodes1.scale.y = 0.51;
+		episodes1.antialiasing = ClientPrefs.globalAntialiasing;
+		add(episodes1);
+
+		extras = new FlxSprite(-80).loadGraphic(Paths.image('mainmenu/nuevomenu/extras'));
+		extras.scrollFactor.set(0, 0);
+		extras.updateHitbox();
+		extras.screenCenter();
+		extras.scale.x = 0.5;
+		extras.scale.y = 0.51;
+		extras.antialiasing = ClientPrefs.globalAntialiasing;
+		add(extras);
+
+		extras2 = new FlxSprite(-80).loadGraphic(Paths.image('mainmenu/nuevomenu/extras2'));
+		extras2.scrollFactor.set(0, 0);
+		extras2.updateHitbox();
+		extras2.screenCenter();
+		extras2.scale.x = 0.5;
+		extras2.scale.y = 0.51;
+		extras2.antialiasing = ClientPrefs.globalAntialiasing;
+		add(extras2);
+
+		configuracion = new FlxSprite(-80).loadGraphic(Paths.image('mainmenu/nuevomenu/configuracion'));
+		configuracion.scrollFactor.set(0, 0);
+		configuracion.updateHitbox();
+		configuracion.screenCenter();
+		configuracion.scale.x = 0.5;
+		configuracion.scale.y = 0.51;
+		configuracion.antialiasing = ClientPrefs.globalAntialiasing;
+		add(configuracion);
+
+		creditos = new FlxSprite(-80).loadGraphic(Paths.image('mainmenu/nuevomenu/creditos'));
+		creditos.scrollFactor.set(0, 0);
+		creditos.updateHitbox();
+		creditos.screenCenter();
+		creditos.scale.x = 0.5;
+		creditos.scale.y = 0.51;
+		creditos.antialiasing = ClientPrefs.globalAntialiasing;
+		add(creditos);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		camFollowPos = new FlxObject(0, 0, 1, 1);
@@ -118,7 +192,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
 			menuItem.screenCenter(X);
-			menuItems.add(menuItem);
+			//menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
 			menuItem.scrollFactor.set(0, scr);
@@ -132,11 +206,11 @@ class MainMenuState extends MusicBeatState
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		add(versionShit);
+	//	add(versionShit);
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "Friday Night Funkin' v" + Application.current.meta.get('version'), 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		add(versionShit);
+	//	add(versionShit);
     
 
 		// NG.core.calls.event.logEvent('swag').send();
@@ -181,7 +255,7 @@ class MainMenuState extends MusicBeatState
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 
-		if (!selectedSomethin)
+		/*if (!selectedSomethin)
 		{
 			if (controls.UI_UP_P)
 			{
@@ -254,15 +328,14 @@ class MainMenuState extends MusicBeatState
 						}
 					});
 				}
-			}
-			#if desktop
-			else if (FlxG.keys.anyJustPressed(debugKeys))
-			{
-				selectedSomethin = true;
-				MusicBeatState.switchState(new MasterEditorMenu());
-			}
-			#end
+			}*/
+		#if desktop
+		if (FlxG.keys.anyJustPressed(debugKeys))
+		{
+			selectedSomethin = true;
+			MusicBeatState.switchState(new MasterEditorMenu());
 		}
+		#end
 
 		super.update(elapsed);
 
@@ -298,4 +371,75 @@ class MainMenuState extends MusicBeatState
 			}
 		});
 	}
+	
+	#if (!flash && sys)
+    public function createRuntimeShader(name:String):FlxRuntimeShader
+    {
+        if(!ClientPrefs.shaders) return new FlxRuntimeShader();
+
+        #if (!flash && MODS_ALLOWED && sys)
+        if(!runtimeShaders.exists(name) && !initLuaShader(name))
+        {
+            FlxG.log.warn('Shader $name is missing!');
+            return new FlxRuntimeShader();
+        }
+
+        var arr:Array<String> = runtimeShaders.get(name);
+        return new FlxRuntimeShader(arr[0], arr[1]);
+        #else
+        FlxG.log.warn("Platform unsupported for Runtime Shaders!");
+        return null;
+        #end
+    }
+
+    public function initLuaShader(name:String, ?glslVersion:Int = 120)
+    {
+        if(!ClientPrefs.shaders) return false;
+
+        if(runtimeShaders.exists(name))
+        {
+            FlxG.log.warn('Shader $name was already initialized!');
+            return true;
+        }
+
+        var foldersToCheck:Array<String> = [Paths.mods('shaders/')];
+        if(Paths.currentModDirectory != null && Paths.currentModDirectory.length > 0)
+            foldersToCheck.insert(0, Paths.mods(Paths.currentModDirectory + '/shaders/'));
+
+        for(mod in Paths.getGlobalMods())
+            foldersToCheck.insert(0, Paths.mods(mod + '/shaders/'));
+        
+        for (folder in foldersToCheck)
+        {
+            if(FileSystem.exists(folder))
+            {
+                var frag:String = folder + name + '.frag';
+                var vert:String = folder + name + '.vert';
+                var found:Bool = false;
+                if(FileSystem.exists(frag))
+                {
+                    frag = File.getContent(frag);
+                    found = true;
+                }
+                else frag = null;
+
+                if (FileSystem.exists(vert))
+                {
+                    vert = File.getContent(vert);
+                    found = true;
+                }
+                else vert = null;
+
+                if(found)
+                {
+                    runtimeShaders.set(name, [frag, vert]);
+                    //trace('Found shader $name!');
+                    return true;
+                }
+            }
+        }
+        FlxG.log.warn('Missing shader $name .frag AND .vert files!');
+        return false;
+    }
+    #end
 }

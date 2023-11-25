@@ -35,7 +35,7 @@
 			]
 		]
 	],
-	"hideStoryMode": false,
+	"hideStoryMode": true,
 	"weekName": "Custom Week",
 	"hiddenUntilUnlocked": false
 }

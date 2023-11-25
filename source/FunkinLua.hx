@@ -225,7 +225,7 @@ class FunkinLua {
 		#else
 		set('buildTarget', 'unknown');
 		#end
-
+		
 		// custom substate
 		Lua_helper.add_callback(lua, "openCustomSubstate", function(name:String, pauseGame:Bool = false) {
 			if(pauseGame)

@@ -1,5 +1,6 @@
 package ;
  
+import flixel.FlxGame;
 import flixel.system.FlxBasePreloader;
 import openfl.display.Sprite;
 import flash.display.Bitmap;
@@ -8,6 +9,17 @@ import flash.display.BlendMode;
 import flash.display.Sprite;
 import flash.Lib;
 import flixel.FlxG;
+
+
+#if !flash 
+import flixel.addons.display.FlxRuntimeShader;
+import openfl.filters.ShaderFilter;
+#end
+
+#if sys
+import sys.FileSystem;
+import sys.io.File;
+#end
  
 @:bitmap("art/preloaderArt.png") class LogoImage extends BitmapData { }
  
